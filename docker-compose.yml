@@ -1,0 +1,33 @@
+services:
+  server:
+    build:
+      context: ./server
+    ports:
+      - "5000:5000"
+    environment:
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_USER: root
+      DB_PASSWORD: nilonuj7
+      DB_NAME: exampledb
+    depends_on:
+      - mysql
+
+  client:
+    build:
+      context: ./client
+    ports:
+      - "3000:80"
+
+  mysql:
+    image: mysql:8
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: nilonuj7
+      MYSQL_DATABASE: exampledb
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data:

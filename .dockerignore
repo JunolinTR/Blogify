@@ -1,0 +1,43 @@
+# Node.js dependencies
+node_modules/
+
+# React build directory
+client/build/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# IDE/editor files
+.idea/
+.vscode/
+
+# Environment files (keep sensitive data private)
+*.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Optional: Ignore all test coverage reports
+coverage/
+
+# Docker-related files
+.docker/
+
+# MySQL data directory (if locally set, you can ignore this)
+mysql_data/
+
+# Git-related files (if not using git, optional)
+.git/
+.gitignore
+
+# Temporary files from build process
+*.bak
+*.swp
